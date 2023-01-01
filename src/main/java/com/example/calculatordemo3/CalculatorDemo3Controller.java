@@ -28,8 +28,6 @@ public class CalculatorDemo3Controller implements Initializable {
     public void Number(ActionEvent ae) {
         String no = ((Button) ae.getSource()).getText();
         txt_result.setText(txt_result.getText() + no);
-
-
     }
 
     //second
@@ -48,6 +46,9 @@ public class CalculatorDemo3Controller implements Initializable {
             }
             number2 = Long.parseLong(txt_result.getText());
             calculate(number1, number2, op);
+            op="";
+
+
         }
     }
 
@@ -70,6 +71,7 @@ public class CalculatorDemo3Controller implements Initializable {
                 txt_result.setText(n1 / (double)n2 + "");
                 break;
         }
+        number1=Long.parseLong(txt_result.getText());
     }
     public void exit(ActionEvent ae){
        String no = ((Button) ae.getSource()).getText();
